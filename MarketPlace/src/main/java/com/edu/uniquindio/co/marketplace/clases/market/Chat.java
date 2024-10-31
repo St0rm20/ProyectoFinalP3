@@ -2,12 +2,14 @@ package com.edu.uniquindio.co.marketplace.clases.market;
 
 import com.edu.uniquindio.co.marketplace.clases.personas.Vendedor;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Chat {
+public class Chat implements Serializable {
     private ArrayList<Mensaje> mensajes;
     private Vendedor vendedor;
     private Vendedor vendedor2;
+    private static final long serialVersionUID = 1L;
 
     public Chat(Vendedor vendedor, Vendedor vendedor2) {
         this.mensajes = new ArrayList<>();
@@ -15,6 +17,10 @@ public class Chat {
         this.vendedor2 = vendedor2;
         vendedor.getChats().add(this);
         vendedor2.getChats().add(this);
+    }
+
+    public Chat(){
+
     }
 
     public ArrayList<Mensaje> getMensajes() {

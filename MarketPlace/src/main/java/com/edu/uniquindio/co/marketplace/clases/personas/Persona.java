@@ -1,14 +1,16 @@
 package com.edu.uniquindio.co.marketplace.clases.personas;
 
 import java.io.File;
+import java.io.Serializable;
 
-public class Persona {
+public class Persona implements Serializable {
     protected String nombre;
     protected String apellido;
     protected String cedula;
     protected String correo;
     protected String contrasenia;
     protected File imagen;
+    private static final long serialVersionUID = 1L;
 
     public Persona(String nombre, String apellido, String cedula, String correo, String contrasenia, File imagen) {
         this.nombre = nombre;
@@ -17,6 +19,10 @@ public class Persona {
         this.correo = correo;
         this.contrasenia = contrasenia;
         this.imagen = imagen;
+    }
+
+    public Persona(){
+
     }
 
     //----------------------------Gets y Sets-------------------------------------

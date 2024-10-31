@@ -1,6 +1,7 @@
 package com.edu.uniquindio.co.marketplace.clases.util;
 
 
+import javafx.application.Platform;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonBar;
 import javafx.scene.control.ButtonType;
@@ -44,14 +45,14 @@ public class Alerta {
         alert.showAndWait();
     }
 
-    public static void mostrarError(String contenido) throws IOException {
-        Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setHeaderText(null);
-        alert.setTitle(Utilities.getIdioma().getString("mensajeError"));
-        alert.setContentText(contenido);
-        ButtonType okButton = new ButtonType(Utilities.getIdioma().getString("botonAceptar"), ButtonBar.ButtonData.OK_DONE);
-        alert.getButtonTypes().setAll(okButton);
-        alert.showAndWait();
+    public static void mostrarError(String mensaje) {
+        Platform.runLater(() -> {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText(null);
+            alert.setContentText(mensaje);
+            alert.showAndWait();
+        });
     }
     // Muestra una alerta con el título, encabezado, contenido y tipo de alerta especificados
     public static void mostrarAlerta(String titulo, String header, String contenido, Alert.AlertType alertType) {

@@ -3,15 +3,20 @@ package com.edu.uniquindio.co.marketplace.clases.market;
 import com.edu.uniquindio.co.marketplace.clases.personas.Vendedor;
 
 import java.io.IOException;
+import java.io.Serializable;
 
-public class Solicitud {
+public class Solicitud implements Serializable{
     Vendedor vendedor;
     Vendedor solicitado;
+    private static final long serialVersionUID = 1L;
 
     public Solicitud(Vendedor vendedor, Vendedor solicitado) {
         this.vendedor = vendedor;
         this.solicitado = solicitado;
         solicitado.getSolicitudes().add(this);
+    }
+
+    public Solicitud(){
     }
 
     public void aceptarSolicitud() throws IOException {

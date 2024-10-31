@@ -3,10 +3,11 @@ package com.edu.uniquindio.co.marketplace.clases.market;
 import com.edu.uniquindio.co.marketplace.clases.enums.EstadoProducto;
 import com.edu.uniquindio.co.marketplace.clases.personas.Vendedor;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
-public class Producto {
+public class Producto implements Serializable {
     private String nombre;
     private String codigo;
     private String descripcion;
@@ -19,6 +20,7 @@ public class Producto {
     private EstadoProducto estado;
     private Vendedor vendedor;
     private ArrayList<Comentario> comentarios;
+    private static final long serialVersionUID = 1L;
 
     public Producto(String nombre, String descripcion, String imagen, String categoria, double precio, EstadoProducto estado, Vendedor vendedor) {
         this.nombre = nombre;
@@ -34,9 +36,22 @@ public class Producto {
         this.comentarios = new ArrayList<>();
     }
 
+    public Producto(){
+    }
+
     public void darLike(){
         likes++;
     }
+
+    public void marcarVendido(){
+        estado = EstadoProducto.VENDIDO;
+    }
+
+    public void marcarCancelado(){
+        estado = EstadoProducto.CANCELADO;
+    }
+
+
 
 
     //----------------------------Gets y Sets-------------------------------------

@@ -5,13 +5,19 @@ import com.edu.uniquindio.co.marketplace.clases.market.MarketPlace;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.Serializable;
 
-public class Administrador extends Persona implements AdministrarVendedores {
+public class Administrador extends Persona implements AdministrarVendedores, Serializable {
 
     MarketPlace marketPlace = MarketPlace.getInstance();
+    private static final long serialVersionUID = 1L;
 
     public Administrador(String nombre, String apellido, String cedula, String correo, String contrasenia, File imagen) {
         super(nombre, apellido, cedula, correo, contrasenia,imagen);
+    }
+
+    public Administrador(){
+        super();
     }
 
     @Override
