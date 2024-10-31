@@ -2,6 +2,7 @@ module com.edu.uniquindio.co.marketplace {
     requires javafx.controls;
     requires javafx.fxml;
     requires java.desktop;
+    requires jdk.jshell;
 
 
     exports com.edu.uniquindio.co.marketplace.clases;
