@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="557.0" prefWidth="958.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.edu.uniquindio.co.marketplace.clases.controladores.PaginaProductosController">
+   <children>
+      <BorderPane layoutX="6.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <VBox prefHeight="200.0" prefWidth="435.0" style="-fx-background-color: #D3D3D3;" styleClass="right-bar" stylesheets="@styles.css" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="110.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="textQuickTrove" prefHeight="49.0" prefWidth="128.0" text="Quick" textFill="#878787">
+                           <font>
+                              <Font name="Cambria Bold" size="40.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="textTrove" text="Trove" textFill="#878787">
+                           <font>
+                              <Font name="Cambria" size="40.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="89.0" prefWidth="375.0" stylesheets="@styles.css" VBox.vgrow="NEVER">
+                     <VBox.margin>
+                        <Insets left="30.0" right="30.0" />
+                     </VBox.margin>
+                     <children>
+                        <TextField fx:id="textFieldBuscar" onAction="#textFieldBuscar" prefHeight="43.0" prefWidth="235.0" promptText="Type here to search" styleClass="transparent" stylesheets="@styles.css">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Cambria" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="onButtonSearch" mnemonicParsing="false" onAction="#onButtonSearch" prefHeight="40.0" prefWidth="100.0" styleClass="search-button" stylesheets="@styles.css" text="Search" textFill="WHITE" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="search-box" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </HBox>
+                  <Pane prefHeight="40.0" prefWidth="435.0" VBox.vgrow="ALWAYS" />
+                  <VBox alignment="CENTER" prefHeight="63.0" prefWidth="203.0" scaleShape="false">
+                     <children>
+                        <Label fx:id="textGetYourShopping" prefHeight="19.0" prefWidth="179.0" text="Get the products you want" textFill="#878787">
+                           <font>
+                              <Font name="Cambria" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="chosenFruitCard" alignment="CENTER" prefHeight="462.0" prefWidth="335.0" stylesheets="@styles.css">
+                     <VBox.margin>
+                        <Insets left="50.0" right="50.0" />
+                     </VBox.margin>
+                     <children>
+                        <HBox prefHeight="60.0" prefWidth="335.0">
+                           <children>
+                              <Label fx:id="fruitNameLable" prefHeight="48.0" prefWidth="276.0" text="Gorra" textFill="WHITE">
+                                 <font>
+                                    <Font name="Cambria" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="GorraLabel" prefHeight="44.0" prefWidth="240.0" text="\$30000" textFill="WHITE">
+                                 <font>
+                                    <Font name="Cambria" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="20.0" top="30.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <ImageView fx:id="gorrapng" fitHeight="168.0" fitWidth="174.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../Imagenes/Gorra.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <HBox alignment="CENTER" prefHeight="53.0" prefWidth="335.0">
+                           <children>
+                              <Label prefWidth="109.0" text=" " />
+                              <Label prefWidth="109.0" text=" " />
+                              <Label fx:id="codigoPrincipal" prefHeight="24.0" prefWidth="68.0" text="#000" textFill="WHITE">
+                                 <font>
+                                    <Font name="Cambria" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="53.0" prefWidth="335.0">
+                           <children>
+                              <Label fx:id="dateLabel" prefHeight="18.0" prefWidth="97.0" text="Date" />
+                              <Label prefWidth="109.0" text=" " />
+                              <Label fx:id="hourLabel" prefHeight="18.0" prefWidth="92.0" text="Hour" />
+                              <Label prefWidth="109.0" text=" " />
+                              <Label fx:id="categoriaLabel" prefHeight="24.0" prefWidth="117.0" text="CATEGORY" textFill="WHITE">
+                                 <font>
+                                    <Font name="Cambria" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label prefWidth="109.0" text=" " />
+                           </children>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="60.0" prefWidth="97.0">
+                           <VBox.margin>
+                              <Insets bottom="20.0" top="20.0" />
+                           </VBox.margin>
+                           <children>
+                              <ImageView fx:id="pngLove" fitHeight="43.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../Imagenes/ic_love_.png" />
+                                 </image>
+                              </ImageView>
+                              <Text fx:id="likesLabel1" strokeType="OUTSIDE" strokeWidth="0.0" text="0000" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="41.33332705497742" />
+                              <ImageView fx:id="pngcomment" fitHeight="43.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../Imagenes/ic_comment.png" />
+                                 </image>
+                              </ImageView>
+                              <Text fx:id="commentsLabel1" strokeType="OUTSIDE" strokeWidth="0.0" text="0000" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="88.0" prefWidth="335.0">
+                           <children>
+                              <Button fx:id="onButtonAddToCart" mnemonicParsing="false" onAction="#OnbuttonAddToCart" prefHeight="31.0" prefWidth="235.0" styleClass="add-btn" stylesheets="@styles.css" text="ADD TO CART" textFill="#828282">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="goToCreator" mnemonicParsing="false" onAction="#onButtonGoCreator" prefHeight="31.0" prefWidth="235.0" styleClass="add-btn" stylesheets="@styles.css" text="CREATOR" textFill="#828282">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="60.0" prefWidth="97.0" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="chosen-fruit-card" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </VBox>
+                  <Pane prefHeight="57.0" prefWidth="435.0" VBox.vgrow="ALWAYS" />
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="65.0" prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </VBox.margin>
+                     <children>
+                        <Label fx:id="textLanguage" prefHeight="29.0" prefWidth="202.0" text="language" textFill="#878787">
+                           <font>
+                              <Font name="Cambria Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Button minWidth="53.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="167.0" styleClass="chat-button" stylesheets="@styles.css" text="English" textFill="#828282">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <Pane prefHeight="65.0" prefWidth="205.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Button fx:id="updatePage" layoutX="71.0" layoutY="12.0" mnemonicParsing="false" onAction="#UpdatePage" prefHeight="41.0" prefWidth="42.0" styleClass="search-button" stylesheets="@styles.css" text="n" textFill="WHITE" />
+                           </children></Pane>
+                        <Label fx:id="textMyAccount" onMouseClicked="#onMyAccount" prefHeight="62.0" prefWidth="171.0" text="My Account" textFill="#878787">
+                           <font>
+                              <Font name="Cambria" size="18.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="logopng" fitHeight="50.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../Imagenes/Logo_cortado.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Pane prefHeight="84.0" prefWidth="96.0" />
+                        <Pane prefHeight="94.0" prefWidth="195.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <HBox alignment="CENTER" layoutX="2.0" layoutY="11.0" prefHeight="73.0" prefWidth="286.0" scaleShape="false" style="-fx-background-color: #D3D3D3;" styleClass="free-delivery-card" stylesheets="@styles.css">
+                                 <children>
+                                    <ImageView fitHeight="36.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../../Imagenes/ic_stopwatch.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button minWidth="53.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="178.0" styleClass="add-btn" stylesheets="@styles.css" text="TOP VENTAS" textFill="#828282">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children></Pane>
+                        <Pane prefHeight="95.0" prefWidth="100.0" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="345.0" prefWidth="523.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <AnchorPane prefHeight="359.0" prefWidth="503.0" styleClass="column-header" stylesheets="@styles.css">
+                           <children>
+                              <VBox fx:id="Vbox2" alignment="TOP_CENTER" layoutX="269.0" layoutY="11.0" prefHeight="255.0" prefWidth="211.0" styleClass="product-Aditional" stylesheets="@styles.css">
+                                 <children>
+                                    <HBox prefHeight="51.0" prefWidth="185.0">
+                                       <children>
+                                          <Label fx:id="nameLabel1" prefHeight="30.0" prefWidth="137.0" text="Estampilla">
+                                             <font>
+                                                <Font name="Cambria" size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="priceLable1" prefHeight="30.0" prefWidth="89.0" text="\$40000">
+                                             <font>
+                                                <Font name="Cambria Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets left="20.0" top="20.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <ImageView fx:id="img1" fitHeight="187.0" fitWidth="98.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../../Imagenes/estrella.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="codeProduct2" prefHeight="21.0" prefWidth="171.0" text="#000" textFill="WHITE">
+                                       <font>
+                                          <Font name="Cambria" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <HBox prefHeight="76.0" prefWidth="209.0">
+                                       <children>
+                                          <ImageView fx:id="pngcomment11" fitHeight="30.0" fitWidth="40.0" onMouseClicked="#onCommentProduct2" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../../../Imagenes/ic_comment.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fx:id="pngLove11" fitHeight="46.0" fitWidth="39.0" onMouseClicked="#onLikeProduct2" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../../../Imagenes/ic_love_.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Button fx:id="onButtonAddToCart2" mnemonicParsing="false" onAction="#OnbuttonAddToCart2" prefHeight="37.0" prefWidth="118.0" styleClass="background" stylesheets="@styles.css" text="View" textFill="#828282">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox fx:id="VBox1" alignment="TOP_CENTER" layoutX="22.666666666666668" layoutY="12.0" prefHeight="255.0" prefWidth="222.0" styleClass="product-Aditional" stylesheets="@styles.css" AnchorPane.bottomAnchor="115.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="270.0" AnchorPane.topAnchor="12.0">
+                                 <children>
+                                    <HBox prefHeight="51.0" prefWidth="185.0">
+                                       <children>
+                                          <Label fx:id="nameLabel" prefHeight="30.0" prefWidth="137.0" text="Camisa">
+                                             <font>
+                                                <Font name="Cambria" size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="priceLable" prefHeight="30.0" prefWidth="89.0" text="\$40000">
+                                             <font>
+                                                <Font name="Cambria Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets left="20.0" top="20.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <ImageView fx:id="img" fitHeight="187.0" fitWidth="98.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../../Imagenes/Camisa.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="codeProduct" prefHeight="21.0" prefWidth="171.0" text="#000" textFill="WHITE">
+                                       <font>
+                                          <Font name="Cambria" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <HBox prefHeight="76.0" prefWidth="209.0">
+                                       <children>
+                                          <ImageView fx:id="pngcomment1" fitHeight="30.0" fitWidth="40.0" onMouseClicked="#onCommentProduct" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../../../Imagenes/ic_comment.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fx:id="pngLove1" fitHeight="46.0" fitWidth="39.0" onMouseClicked="#onLikeProduct" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../../../Imagenes/ic_love_.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Button fx:id="onButtonAddToCart1" mnemonicParsing="false" onAction="#OnbuttonAddToCart" prefHeight="37.0" prefWidth="118.0" styleClass="background" stylesheets="@styles.css" text="View" textFill="#828282">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <Button fx:id="buttonBackProducts" layoutX="133.0" layoutY="304.0" mnemonicParsing="false" onAction="#onButtonBackProducts" prefHeight="40.0" prefWidth="100.0" styleClass="search-button" stylesheets="@styles.css" text="&lt;-" textFill="WHITE" />
+                              <Button fx:id="buttonGo" layoutX="259.0" layoutY="304.0" mnemonicParsing="false" onAction="#onButtonSearch" prefHeight="40.0" prefWidth="100.0" styleClass="search-button" stylesheets="@styles.css" text="-&gt;" textFill="WHITE" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+      <Button fx:id="buttonBackPage" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onButtonBackPage" prefHeight="41.0" prefWidth="49.0" styleClass="search-button" stylesheets="@styles.css" text="&lt;-" textFill="WHITE" />
+   </children>
+</AnchorPane>

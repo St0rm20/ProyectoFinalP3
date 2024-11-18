@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="519.0" prefWidth="827.0" styleClass="background" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.edu.uniquindio.co.marketplace.clases.controladores.AddProductController">
+   <children>
+      <Pane layoutX="8.0" layoutY="56.0" prefHeight="287.0" prefWidth="216.0" styleClass="product-pane">
+         <children>
+            <ImageView fx:id="pngcomment12" fitHeight="241.0" fitWidth="185.0" layoutX="14.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Imagenes/Camisa.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <HBox layoutX="234.0">
+         <children>
+            <TabPane prefHeight="519.0" prefWidth="594.0" tabClosingPolicy="UNAVAILABLE">
+               <tabs>
+                  <Tab text="ADD PRODUCT">
+                     <content>
+                        <VBox prefHeight="200.0" prefWidth="100.0" styleClass="edit-profile-tab">
+                           <children>
+                              <Pane prefHeight="107.0" prefWidth="594.0" />
+                              <VBox prefHeight="209.0" prefWidth="594.0">
+                                 <children>
+                                    <HBox prefHeight="40.0" prefWidth="277.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  " wrappingWidth="80.60157775878906" />
+                                          <TextField fx:id="textFieldName1" prefHeight="29.0" prefWidth="358.0" promptText="Name ">
+                                             <padding>
+                                                <Insets left="20.0" />
+                                             </padding>
+                                          </TextField>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="                        " wrappingWidth="99.21875" />
+                                          <TextField fx:id="textFieldLastName1" prefHeight="29.0" prefWidth="381.0" promptText="Precio">
+                                             <padding>
+                                                <Insets left="20.0" />
+                                             </padding>
+                                          </TextField>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="                        " wrappingWidth="88.55206263065338" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="37.0" prefWidth="594.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  " wrappingWidth="66.60157775878906" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  " wrappingWidth="10.601574897766113" />
+                                          <TextField fx:id="textFieldDescription" prefHeight="29.0" prefWidth="235.0" promptText="Description">
+                                             <padding>
+                                                <Insets left="20.0" />
+                                             </padding>
+                                          </TextField>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  " wrappingWidth="40.6015739440918" />
+                                          <TextField fx:id="textFieldCategory" prefHeight="29.0" prefWidth="217.0" promptText="Category">
+                                             <padding>
+                                                <Insets left="20.0" />
+                                             </padding>
+                                          </TextField>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  " wrappingWidth="80.60157775878906" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="37.0" prefWidth="594.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  " wrappingWidth="80.60157775878906" />
+                                          <ChoiceBox fx:id="ChoiceBoxEstado" prefHeight="32.0" prefWidth="342.0" stylesheets="@styles.css" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  " wrappingWidth="80.60157775878906" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  " wrappingWidth="80.60157775878906" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  " wrappingWidth="80.60157775878906" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="53.0" prefWidth="594.0">
+                                       <children>
+                                          <HBox prefHeight="69.0" prefWidth="513.0">
+                                             <children>
+                                                <Button fx:id="buttonUpdate" mnemonicParsing="false" onAction="#onbuttonUpdate" prefHeight="38.0" prefWidth="186.0" styleClass="update-button" stylesheets="@styles.css" text="UPDATE" textFill="#828282">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Button>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  " wrappingWidth="126.82384490966797" />
+                                                <Button fx:id="buttonDelete" mnemonicParsing="false" onAction="#onbuttonUpdate" prefHeight="36.0" prefWidth="194.0" styleClass="update-button" stylesheets="@styles.css" text="DELETE" textFill="#828282">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Button>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  " wrappingWidth="20.157209873199463" />
+                                                <Button fx:id="buttonAdd" mnemonicParsing="false" onAction="#onbuttonAdd" prefHeight="31.0" prefWidth="209.0" styleClass="update-button" stylesheets="@styles.css" text="ADD" textFill="#828282">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  " wrappingWidth="80.60157775878906" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <TableView fx:id="tablaProducts" prefHeight="247.0" prefWidth="532.0" styleClass="table-panel" stylesheets="@styles.css">
+                                 <columns>
+                                    <TableColumn id="nameColumn" fx:id="columnName" prefWidth="115.33331298828125" styleClass="table-column-header" text="Name" />
+                                    <TableColumn fx:id="columPrecio" prefWidth="57.333343505859375" text="precio" />
+                                    <TableColumn fx:id="columCode" prefWidth="67.33331298828125" styleClass="table-column-header" text="code" />
+                                    <TableColumn fx:id="columnComments" minWidth="0.0" prefWidth="78.0" styleClass="table-column-header" text="comments" />
+                                    <TableColumn fx:id="columnFecha" minWidth="0.0" prefWidth="80.66668701171875" styleClass="table-column-header" text="fecha" />
+                                    <TableColumn fx:id="columStatus" minWidth="0.0" prefWidth="110.66668701171875" styleClass="table-column-header" text="Status" />
+                                    <TableColumn fx:id="columCategory" minWidth="0.0" prefWidth="84.0" styleClass="table-column-header" text="Category" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </VBox>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </children>
+      </HBox>
+      <Button fx:id="buttonAddImage" layoutX="52.0" layoutY="350.0" mnemonicParsing="false" onAction="#onbuttonAddImage" prefHeight="39.0" prefWidth="131.0" styleClass="update-button" stylesheets="@styles.css" text="ADD IMAGE" textFill="#828282">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonBack" layoutX="6.0" layoutY="476.0" mnemonicParsing="false" onAction="#onButtonBack" prefHeight="38.0" prefWidth="91.0" styleClass="update-button" stylesheets="@styles.css" text="BACK" textFill="#828282">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
