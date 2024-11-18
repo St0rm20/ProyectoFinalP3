@@ -1,0 +1,247 @@
+/* Fondo Principal */
+.background-Principal {
+    -fx-background-color: linear-gradient(to right, #F16C31, #BAEAC3);
+    -fx-padding: 20;
+}
+
+/* Fondo general */
+.background {
+    -fx-background-color: #eadca4;
+}
+
+/* Botón de búsqueda */
+.search-button {
+    -fx-background-color: #828282;
+    -fx-background-radius: 30;
+}
+
+/* Pestaña personalizada */
+.custom-tab {
+    -fx-background-color: #eadca4;
+    -fx-font-size: 15px;
+    -fx-background-radius: 30;
+    -fx-font-weight: bold;
+    -fx-text-fill: #000000;
+}
+
+/* Caja de Socio */
+.Box-Socio {
+    -fx-background-color: #ef8b61;
+    -fx-border-color: #b13c07;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-padding: 10;
+}
+
+/* Campo de texto */
+.text-field {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 20;
+    -fx-text-fill: #000000;
+    -fx-font-size: 16;
+}
+
+/* Estilo de login y signup */
+.text-Login-Signup {
+    -fx-background-color: rgba(255, 255, 255, 0.7);
+    -fx-border-color: #F16C31;
+    -fx-border-radius: 5;
+    -fx-padding: 5;
+    -fx-font-size: 14px;
+}
+
+/* Estilo de ChoiceBox */
+.choice-box {
+    -fx-background-color: #BAEAC3;
+    -fx-border-color: #F16C31;
+    -fx-border-radius: 5;
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+}
+
+.choice-box .list-view {
+    -fx-background-color: #F16C31;
+    -fx-text-fill: #FFFFFF;
+}
+
+.choice-box .list-view .list-cell:hover {
+    -fx-background-color: #F16C31;
+}
+
+.choice-box .list-view .list-cell:selected {
+    -fx-background-color: #F16C31;
+    -fx-text-fill: #FFFFFF;
+}
+
+/* Estilo de búsqueda */
+.search-box {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 100;
+}
+
+/* Fondo transparente */
+.transparent {
+    -fx-background-color: rgba(0, 0, 0, 0);
+}
+
+/* Panel */
+.pane {
+    -fx-background-color: White;
+    -fx-background-radius: 30;
+}
+
+/* Tarjeta de fruta elegida */
+.chosen-fruit-card, .chosen-fruit-card2 {
+    -fx-background-color: #F16C31;
+    -fx-background-radius: 30;
+}
+
+/* Producto adicional */
+.product-Aditional {
+    -fx-background-color: #ddbfaf;
+    -fx-background-radius: 30;
+}
+
+/* Efecto de sombra */
+.shadow {
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.1), 10.0, 0.0, 0.0, 10.0);
+}
+
+/* Botón de chat */
+.chat-button {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 100;
+}
+
+/* Panel de usuario */
+.usuario-pane {
+    -fx-background-color: #BAEAC3;
+    -fx-background-radius: 30;
+}
+
+/* Panel de producto */
+.product-pane {
+    -fx-background-color: white;
+    -fx-background-radius: 30;
+}
+
+/* Panel de comentarios */
+.comments-pane {
+    -fx-background-color: #F16C31;
+    -fx-background-radius: 30;
+}
+
+/* ComboBox */
+.comboBox {
+    -fx-background-color: rgba(255, 255, 255, 0.3);
+    -fx-background-radius: 30;
+}
+
+/* Barra derecha y tarjeta de envío gratuito */
+.right-bar, .free-delivery-card {
+    -fx-background-color: #D3D3D3;
+    -fx-background-radius: 30;
+}
+
+/* Elemento de fruta */
+.fruit-item {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 30;
+}
+
+/* Hover sobre el botón de actualización */
+.update-button:hover {
+    -fx-background-color: #BAEAC3;
+}
+
+/* Estrella */
+.star {
+    -fx-background-color: #c6c66f;
+    -fx-background-radius: 30;
+}
+
+.star:hover {
+    -fx-background-color: gold;
+}
+
+/* Botón de actualización */
+.update-button {
+    -fx-background-color: #40884d;
+    -fx-background-radius: 30;
+    -fx-text-fill: #FFFFFF;
+}
+
+/* Panel de tabla */
+.table-panel {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 30;
+}
+
+/* Pestaña de perfil */
+.edit-profile-tab {
+    -fx-background-color: #F16C31;
+    -fx-background-radius: 30;
+    -fx-text-fill: #FFFFFF;
+}
+
+/* Encabezados de tabla */
+.table-view .column-header {
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-background-color: #8dd591;
+}
+
+/* Celdas de tabla */
+.table-view .table-cell {
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-border-color: #8dd591;
+    -fx-border-width: 1px;
+    -fx-padding: 10px;
+}
+
+/* Filas de tabla */
+.table-view .table-row-cell {
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-background-color: transparent;
+}
+
+/* Estilo de texto */
+.h1, .h2, .h3, .h4, .h5, .h6, .title, .subtitle {
+    -fx-text-fill: #333333;
+}
+
+/* Tamaños de texto */
+.text-10, .btn-small, .text-small {
+    -fx-font-size: 10px;
+}
+
+.text-12, .h6 {
+    -fx-font-size: 12px;
+}
+
+.text-14, .h5 {
+    -fx-font-size: 14px;
+}
+
+.text-18, .h4, .subtitle {
+    -fx-font-size: 18px;
+}
+
+.text-24, .h3, .title {
+    -fx-font-size: 24px;
+}
+
+.text-30, .h2 {
+    -fx-font-size: 30px;
+}
+
+.text-36, .h1 {
+    -fx-font-size: 36px;
+}
+
+/* Estilo de texto en negrita */
+.title, .text-bold {
+    -fx-font-weight: bold;
+}
