@@ -2,15 +2,18 @@ package com.edu.uniquindio.co.marketplace.clases.market;
 
 import com.edu.uniquindio.co.marketplace.clases.enums.EstadoProducto;
 import com.edu.uniquindio.co.marketplace.clases.personas.Vendedor;
+import com.edu.uniquindio.co.marketplace.clases.util.Persistencia;
+import javafx.scene.image.Image;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
-public class Producto {
+public class Producto implements Serializable {
     private String nombre;
     private String codigo;
     private String descripcion;
-    private String imagen;
+    private Image imagen;
     private LocalDateTime fechaPublicacion;
     private String categoria;
     private int likes;
@@ -19,8 +22,11 @@ public class Producto {
     private EstadoProducto estado;
     private Vendedor vendedor;
     private ArrayList<Comentario> comentarios;
+    private static final long serialVersionUID = 1L;
 
-    public Producto(String nombre, String descripcion, String imagen, String categoria, double precio, EstadoProducto estado, Vendedor vendedor) {
+    public Producto(String nombre, String descripcion, Image imagen, String categoria, double precio, EstadoProducto estado, Vendedor vendedor) {
+        contador = Persistencia.leerContadorProducto();
+        System.out.println(contador);
         this.nombre = nombre;
         this.codigo = String.valueOf(contador++);
         this.descripcion = descripcion;
@@ -32,11 +38,27 @@ public class Producto {
         this.estado = estado;
         this.vendedor = vendedor;
         this.comentarios = new ArrayList<>();
+        if(MarketPlace.getInstance().getGuardarPersistencia()) {
+            Persistencia.guardarContadorProducto();
+        }
+    }
+
+    public Producto(){
     }
 
     public void darLike(){
         likes++;
     }
+
+    public void marcarVendido(){
+        estado = EstadoProducto.VENDIDO;
+    }
+
+    public void marcarCancelado(){
+        estado = EstadoProducto.CANCELADO;
+    }
+
+
 
 
     //----------------------------Gets y Sets-------------------------------------
@@ -65,11 +87,11 @@ public class Producto {
         this.descripcion = descripcion;
     }
 
-    public String getImagen() {
+    public Image getImagen() {
         return imagen;
     }
 
-    public void setImagen(String imagen) {
+    public void setImagen(Image imagen) {
         this.imagen = imagen;
     }
 
@@ -142,8 +164,6 @@ public class Producto {
         return "Producto{" +
                 "nombre='" + nombre + '\'' +
                 ", codigo='" + codigo + '\'' +
-                ", descripcion='" + descripcion + '\'' +
-                ", estado='" + estado + '\'' +
                 '}';
     }
 }

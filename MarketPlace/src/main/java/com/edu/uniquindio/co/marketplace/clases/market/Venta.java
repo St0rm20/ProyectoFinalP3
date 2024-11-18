@@ -2,16 +2,24 @@ package com.edu.uniquindio.co.marketplace.clases.market;
 
 import com.edu.uniquindio.co.marketplace.clases.personas.Vendedor;
 
-import java.util.ArrayList;
 
-public class Venta {
+import java.io.Serializable;
+import java.time.LocalDate;
+
+
+public class Venta implements Serializable {
     private Producto producto;
     private Vendedor comprador;
+    private static final long serialVersionUID = 1L;
 
     public Venta(Producto producto, Vendedor comprador) {
         this.producto = producto;
         this.comprador = comprador;
         producto.getVendedor().getVentas().add(this);
+    }
+
+    public Venta(){
+
     }
 
     public Producto getProducto() {
@@ -32,5 +40,14 @@ public class Venta {
 
     public void setProducto(Producto producto) {
         this.producto = producto;
+    }
+
+    @Override
+    public String toString() {
+        return "Venta:" +
+                "producto= " + producto.getNombre() +
+                "codigo=" + producto.getCodigo() +
+                ", comprador=" + comprador +
+                "fecha de venta=" + LocalDate.now();
     }
 }

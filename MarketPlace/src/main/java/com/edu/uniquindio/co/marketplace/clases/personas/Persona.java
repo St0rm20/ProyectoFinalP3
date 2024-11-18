@@ -1,22 +1,30 @@
 package com.edu.uniquindio.co.marketplace.clases.personas;
 
-import java.io.File;
+import javafx.scene.image.Image;
 
-public class Persona {
+import java.io.File;
+import java.io.Serializable;
+
+public class Persona implements Serializable {
     protected String nombre;
     protected String apellido;
     protected String cedula;
     protected String correo;
     protected String contrasenia;
-    protected File imagen;
+    protected Image imagen;
+    private static final long serialVersionUID = 1L;
 
-    public Persona(String nombre, String apellido, String cedula, String correo, String contrasenia, File imagen) {
+    public Persona(String nombre, String apellido, String cedula, String correo, String contrasenia, Image imagen) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.cedula = cedula;
         this.correo = correo;
         this.contrasenia = contrasenia;
         this.imagen = imagen;
+    }
+
+    public Persona(){
+
     }
 
     //----------------------------Gets y Sets-------------------------------------
@@ -61,11 +69,12 @@ public class Persona {
         this.contrasenia = contrasenia;
     }
 
-    public File getImagen() {
+    public Image getImagen() {
+
         return imagen;
     }
 
-    public void setImagen(File imagen) {
+    public void setImagen(Image imagen) {
         this.imagen = imagen;
     }
 }
