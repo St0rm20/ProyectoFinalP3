@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="519.0" prefWidth="827.0" styleClass="background" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.edu.uniquindio.co.marketplace.clases.controladores.AdminViewController">
+   <children>
+      <Pane fx:id="BackgroundAdmin" layoutX="8.0" layoutY="56.0" prefHeight="287.0" prefWidth="216.0" styleClass="usuario-pane">
+         <children>
+            <ImageView fx:id="pngcomment12" fitHeight="108.0" fitWidth="184.0" layoutX="53.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Imagenes/Avatar.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="nombreadminLabel" layoutX="29.0" layoutY="111.0" prefHeight="38.0" prefWidth="134.0" text="Name seller" />
+            <Label fx:id="apellidoAdminLabel" layoutX="29.0" layoutY="139.0" prefHeight="38.0" prefWidth="155.0" text="Last name seller " />
+            <Label fx:id="IDadminLabel" layoutX="29.0" layoutY="171.0" prefHeight="38.0" prefWidth="134.0" text="ID seller" />
+            <Label fx:id="EmailAdminLabel" layoutX="29.0" layoutY="200.0" prefHeight="38.0" prefWidth="134.0" text="Email seller" />
+         </children>
+      </Pane>
+      <HBox layoutX="234.0">
+         <children>
+            <TabPane prefHeight="519.0" prefWidth="594.0" tabClosingPolicy="UNAVAILABLE">
+               <tabs>
+                  <Tab fx:id="onEditProfileInformationAdmin" text="Edit Profile Information">
+                     <content>
+                        <VBox prefHeight="200.0" prefWidth="100.0" styleClass="edit-profile-tab">
+                           <children>
+                              <Pane prefHeight="107.0" prefWidth="594.0">
+                                 <children>
+                                    <ImageView fx:id="changeImageAdmin" fitHeight="62.0" fitWidth="75.0" layoutX="37.0" layoutY="34.0" onMouseClicked="#onChangeImageAdmin" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../../Imagenes/Avatar.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children></Pane>
+                              <VBox prefHeight="209.0" prefWidth="594.0">
+                                 <children>
+                                    <HBox prefHeight="40.0" prefWidth="277.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  " wrappingWidth="80.60157775878906" />
+                                          <TextField fx:id="textFieldNameAdmin" prefHeight="29.0" prefWidth="358.0" promptText="Name">
+                                             <padding>
+                                                <Insets left="20.0" />
+                                             </padding>
+                                          </TextField>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="                        " wrappingWidth="99.21875" />
+                                          <TextField fx:id="textFieldLastNameAdmin" prefHeight="29.0" prefWidth="381.0" promptText="Last name">
+                                             <padding>
+                                                <Insets left="20.0" />
+                                             </padding>
+                                          </TextField>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="                        " wrappingWidth="88.55206263065338" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="37.0" prefWidth="594.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  " wrappingWidth="80.60157775878906" />
+                                          <PasswordField fx:id="textFieldPasswordAdmin" prefHeight="29.0" prefWidth="175.0" promptText="Password">
+                                             <padding>
+                                                <Insets left="20.0" />
+                                             </padding>
+                                          </PasswordField>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  " wrappingWidth="80.60157775878906" />
+                                          <TextField fx:id="textFieldEmailAdmin" prefHeight="29.0" prefWidth="181.0" promptText="Email Address">
+                                             <padding>
+                                                <Insets left="20.0" />
+                                             </padding>
+                                          </TextField>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  " wrappingWidth="80.60157775878906" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="37.0" prefWidth="594.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  " wrappingWidth="80.60157775878906" />
+                                          <TextField fx:id="textFieldIDAdmin" prefHeight="29.0" prefWidth="175.0" promptText="ID">
+                                             <padding>
+                                                <Insets left="20.0" />
+                                             </padding>
+                                          </TextField>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  " wrappingWidth="80.60157775878906" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="53.0" prefWidth="594.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  " wrappingWidth="80.60157775878906" />
+                                          <HBox prefHeight="37.0" prefWidth="594.0">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  " wrappingWidth="80.60157775878906" />
+                                                <Button fx:id="onButtonUptade" mnemonicParsing="false" onAction="#onButtonUptade" prefHeight="39.0" prefWidth="101.0" styleClass="update-button" stylesheets="@styles.css" text="UPDATE" textFill="#828282">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="onEditSalesPersonInformationAdmin" text="Edit Salesperson Information">
+                     <content>
+                        <VBox prefHeight="200.0" prefWidth="100.0" styleClass="edit-profile-tab">
+                           <children>
+                              <Pane prefHeight="107.0" prefWidth="594.0">
+                                 <children>
+                                    <ImageView fx:id="salesPersonImage" fitHeight="63.0" fitWidth="61.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#onSalesPersonImage" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../../Imagenes/Avatar.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children></Pane>
+                              <VBox prefHeight="209.0" prefWidth="594.0">
+                                 <children>
+                                    <HBox prefHeight="40.0" prefWidth="277.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  " wrappingWidth="80.60157775878906" />
+                                          <TextField fx:id="textFieldNameAdminEditSalesperson" prefHeight="29.0" prefWidth="358.0" promptText="Name">
+                                             <padding>
+                                                <Insets left="20.0" />
+                                             </padding>
+                                          </TextField>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="                        " wrappingWidth="99.21875" />
+                                          <TextField fx:id="textFieldLastNameAdminEditSalesperson" prefHeight="29.0" prefWidth="381.0" promptText="Last name">
+                                             <padding>
+                                                <Insets left="20.0" />
+                                             </padding>
+                                          </TextField>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="                        " wrappingWidth="88.55206263065338" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="37.0" prefWidth="594.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  " wrappingWidth="80.60157775878906" />
+                                          <PasswordField fx:id="textFieldPasswordEditSalesperson" prefHeight="29.0" prefWidth="175.0" promptText="Password">
+                                             <padding>
+                                                <Insets left="20.0" />
+                                             </padding>
+                                          </PasswordField>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  " wrappingWidth="80.60157775878906" />
+                                          <TextField fx:id="textFieldEmailEditSalesperson" prefHeight="29.0" prefWidth="181.0" promptText="Email Address">
+                                             <padding>
+                                                <Insets left="20.0" />
+                                             </padding>
+                                          </TextField>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  " wrappingWidth="80.60157775878906" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="37.0" prefWidth="594.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  " wrappingWidth="80.60157775878906" />
+                                          <TextField fx:id="textFieldIDEditSalesperson" prefHeight="29.0" prefWidth="175.0" promptText="ID">
+                                             <padding>
+                                                <Insets left="20.0" />
+                                             </padding>
+                                          </TextField>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  " wrappingWidth="80.60157775878906" />
+                                          <TextField fx:id="textFieldAddresEditSalesperson" prefHeight="29.0" prefWidth="173.0" promptText="Address">
+                                             <padding>
+                                                <Insets left="20.0" />
+                                             </padding>
+                                          </TextField>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  " wrappingWidth="80.60157775878906" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="53.0" prefWidth="594.0">
+                                       <children>
+                                          <HBox prefHeight="37.0" prefWidth="594.0">
+                                             <children>
+                                                <Button fx:id="onButtonUptadeEditSalesperson" mnemonicParsing="false" onAction="#OnButtonUptadeEditSalesperson" prefHeight="39.0" prefWidth="121.0" styleClass="update-button" stylesheets="@styles.css" text="UPDATE" textFill="#828282">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Button>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  " wrappingWidth="80.60157775878906" />
+                                                <Button fx:id="onButtonDeleteEditSalesperson" mnemonicParsing="false" onAction="#onButtonDeleteEditSalesperson" prefHeight="36.0" prefWidth="111.0" styleClass="update-button" stylesheets="@styles.css" text="DELETE" textFill="#828282">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Button>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  " wrappingWidth="80.60157775878906" />
+                                                <Button fx:id="onButtonAddEditSalesperson" mnemonicParsing="false" onAction="#onButtonAddEditSalesperson" prefHeight="31.0" prefWidth="111.0" styleClass="update-button" stylesheets="@styles.css" text="ADD" textFill="#828282">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Button>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  " wrappingWidth="80.60157775878906" />
+                                             </children>
+                                          </HBox>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  " wrappingWidth="80.60157775878906" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <TableView fx:id="vendedoresTabla" prefHeight="247.0" prefWidth="532.0" styleClass="table-panel" stylesheets="@styles.css">
+                                 <columns>
+                                    <TableColumn id="nameColumn" fx:id="ColumnNameEditSalesPerson" prefWidth="75.0" styleClass="table-column-header" text="Name" />
+                                    <TableColumn fx:id="ColumnLastNameEditSalesPerson" prefWidth="106.66667175292969" text="Last Name" />
+                                    <TableColumn fx:id="ColumnAddressEditSalesPerson" prefWidth="97.33328247070312" styleClass="table-column-header" text="Address" />
+                                    <TableColumn fx:id="ColumnIDEditSalesPerson" prefWidth="74.0" styleClass="table-column-header" text="ID" />
+                                    <TableColumn fx:id="ColumnEmailEditSalesPerson" minWidth="0.0" prefWidth="87.33331298828125" styleClass="table-column-header" text="Email" />
+                                    <TableColumn fx:id="ColumnCodeEditSalesPerson" minWidth="0.0" prefWidth="87.33331298828125" styleClass="table-column-header" text="CODE" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </VBox>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </children>
+      </HBox>
+      <Button fx:id="onButtonUpdatePageAdmin" layoutX="179.0" layoutY="467.0" mnemonicParsing="false" onAction="#onButtonUpdatePageAdmin" prefHeight="39.0" prefWidth="39.0" styleClass="update-button" stylesheets="@styles.css" text="N" textFill="#828282">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Label fx:id="AdminLabel" layoutX="65.0" layoutY="14.0" prefHeight="38.0" prefWidth="134.0" styleClass="text-30" text="ADMIN" />
+      <Button fx:id="onButtonBack" layoutX="14.0" layoutY="467.0" mnemonicParsing="false" onAction="#OnButtonBack" prefHeight="38.0" prefWidth="91.0" styleClass="update-button" stylesheets="@styles.css" text="BACK" textFill="#828282">         <font>
+         <Font name="System Bold" size="18.0" />
+      </font>
+      </Button>
+   </children>
+   <stylesheets>
+      <URL value="@styles.css" />
+      <URL value="@styles.css" />
+   </stylesheets>
+</AnchorPane>

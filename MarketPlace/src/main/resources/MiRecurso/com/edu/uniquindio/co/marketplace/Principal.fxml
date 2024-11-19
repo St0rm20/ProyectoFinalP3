@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:controller="com.edu.uniquindio.co.marketplace.clases.controladores.PrincipalController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="background-Principal" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fx:id="logopng" fitHeight="155.0" fitWidth="279.0" layoutX="220.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Imagenes/Logo_cortado.png" />
+         </image>
+      </ImageView>
+      <HBox alignment="CENTER" layoutX="107.0" layoutY="189.0" prefHeight="110.0" prefWidth="385.0">
+         <children>
+            <Label fx:id="textQuickTrove" prefHeight="49.0" prefWidth="128.0" text="Quick" textFill="#878787">
+               <font>
+                  <Font name="Cambria Bold" size="40.0" />
+               </font>
+            </Label>
+            <Label fx:id="textTrove" text="Trove" textFill="#878787">
+               <font>
+                  <Font name="Cambria" size="40.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Button fx:id="buttonEnter" focusTraversable="false" layoutX="254.0" layoutY="287.0" mnemonicParsing="false" onAction="#onButtonEnter" prefHeight="45.0" prefWidth="91.0" style="-fx-background-color: BAEAC3;" styleClass="search-button" stylesheets="@styles.css" text="Enter" />
+   </children>
+</AnchorPane>
